@@ -15,19 +15,24 @@ export default function Home() {
       </header>
 
       {/* About Section */}
-  <section id="about" className="p-12 max-w-3xl mx-auto bg-white/80 dark:bg-[#303134] rounded-2xl shadow mb-12 mt-12">
-        <h2 className="text-xl font-semibold mb-4">About Me</h2>
-        <p>
-          Hi, I’m Tien 👋. I’m an engineer with a passion for building systems,
-          exploring embedded software, and creating cool side projects. This
-          site is my personal portfolio where I showcase the things I’ve built
-          and worked on.
-        </p>
+      <section id="about" className="p-12 max-w-3xl mx-auto bg-white/80 dark:bg-[#303134] rounded-2xl shadow mb-12 mt-12">
+        <div className="flex items-center mb-6 min-h-[180px]">
+          <img src="/profile.jpg" alt="Profile photo" className="w-36 h-36 rounded-full object-cover object-center scale-110 border-2 border-gray-300 dark:border-gray-600 mr-8" />
+          <div className="flex-1">
+            <h2 className="text-xl font-semibold mb-6">About Me</h2>
+            <p>
+              Hi, I’m Tien 👋. I’m an engineer with a passion for building systems,
+              exploring embedded software, and creating cool side projects. This
+              site is my personal portfolio where I showcase the things I’ve built
+              and worked on.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Projects Section */}
   <section id="projects" className="p-12 bg-gray-100/80 dark:bg-[#303134] mb-12 mx-[50px] rounded-2xl">
-  <h2 className="text-2xl font-bold mb-2 text-center">Projects</h2>
+  <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
   <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="p-6 bg-white/80 dark:bg-[#303134] rounded-2xl shadow">
