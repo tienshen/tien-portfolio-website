@@ -1,7 +1,7 @@
 
 # Tien's Portfolio Website
 
-This is a personal portfolio website built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com). It showcases Tien's background, projects, and contact information, with a modern dark theme inspired by Google Search.
+This is a personal portfolio website built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com), with Copilot AI assistance. It showcases my background, projects, and contact information.
 
 ## Features
 

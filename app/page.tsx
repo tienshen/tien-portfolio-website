@@ -17,7 +17,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="p-12 max-w-3xl mx-auto bg-white/80 dark:bg-[#303134] rounded-2xl shadow mb-12 mt-12">
         <div className="flex items-center mb-6 min-h-[180px]">
-          <img src="/profile.jpg" alt="Profile photo" className="w-36 h-36 rounded-full object-cover object-center scale-110 border-2 border-gray-300 dark:border-gray-600 mr-8" />
+          <img src="/tien-profile.jpg" alt="Tien's Profile photo" className="w-36 h-36 rounded-full object-cover object-center scale-110 border-2 border-gray-300 dark:border-gray-600 mr-8" />
           <div className="flex-1">
             <h2 className="text-xl font-semibold mb-6">About Me</h2>
             <p>
