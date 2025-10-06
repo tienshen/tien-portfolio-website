@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#202124] dark:bg-[#202124] text-gray-900 dark:text-gray-100">
       {/* Header */}
-  <header className="py-6 flex justify-center items-center border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-[#26282b]">
+  <header className="py-6 flex justify-center items-center border-b border-gray-200 dark:border-gray-700 bg-[var(--header-background)]">
         <div className="flex items-center gap-[50px]">
           <h1 className="text-2xl font-bold">Tien</h1>
           <nav className="space-x-6">
@@ -15,7 +15,7 @@ export default function Home() {
       </header>
 
       {/* About Section */}
-      <section id="about" className="p-12 max-w-3xl mx-auto bg-white/80 dark:bg-[#303134] rounded-2xl shadow mb-12 mt-12">
+  <section id="about" className="p-12 max-w-3xl mx-auto bg-[var(--box-background)] rounded-2xl shadow mb-12 mt-12">
         <div className="flex items-center mb-6 min-h-[180px]">
           <img src="/tien-profile.jpg" alt="Tien's Profile photo" className="w-36 h-36 rounded-full object-cover object-center scale-110 border-2 border-gray-300 dark:border-gray-600 mr-8" />
           <div className="flex-1">
@@ -31,11 +31,11 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-  <section id="projects" className="p-8 bg-gray-100/80 dark:bg-[#303134] mb-6 mx-[50px] rounded-2xl">
+  <section id="projects" className="p-8 bg-[var(--box-background)] mb-6 mx-[50px] rounded-2xl">
   <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
   <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="p-6 bg-white/80 dark:bg-[#303134] rounded-2xl shadow">
+          <div className="p-6 bg-[var(--box-background)] rounded-2xl shadow">
             <h3 className="text-lg font-bold mb-2">Active Window – UMass Senior Design Project</h3>
               <img src="/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
             <p className="mb-2">
@@ -58,7 +58,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-6 bg-white/80 dark:bg-[#303134] rounded-2xl shadow">
+          <div className="p-6 bg-[var(--box-background)] rounded-2xl shadow">
             <h3 className="text-lg font-bold mb-2">Project Two</h3>
             <p className="mb-4">Description of the project and technologies used.</p>
             <a href="#" className="text-blue-500 hover:underline">View Demo</a>

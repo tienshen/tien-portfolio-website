@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Theme macros for header and text box (preserve current visuals) */
+  --header-background: rgba(255,255,255,0.8); /* matches bg-white/80 */
+  --box-background: rgba(255,255,255,0.8); /* matches bg-white/80 */
 }
 
 @theme inline {
@@ -16,6 +19,9 @@
   :root {
     --background: #23272f;
     --foreground: #ededed;
+    /* Dark theme values matching current hardcoded colors */
+    --header-background: #26282b;
+    --box-background: #303134;
   }
 }
 
