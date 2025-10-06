@@ -65,9 +65,18 @@ export default function Home() {
           </div>
 
           <div className="p-6 bg-box rounded-2xl shadow">
-            <h3 className="text-lg font-bold mb-2">Project Two</h3>
-            <p className="mb-4">Description of the project and technologies used.</p>
-            <a href="#" className="text-blue-500 hover:underline">View Demo</a>
+            <h3 className="text-lg font-bold mb-2">This Website (Portfolio)</h3>
+            <p className="mb-2">Personal portfolio built with Next.js (app router), Tailwind CSS and TypeScript. Features a theme toggle with smooth transitions, responsive layout, and project showcase.</p>
+            <ul className="mb-2 list-disc list-inside text-sm">
+              <li>Next.js 15 with App Router</li>
+              <li>TypeScript & Tailwind CSS</li>
+              <li>Dark/Light theme toggle</li>
+              <li>CSS custom properties & transitions</li>
+            </ul>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://github.com/tienshen/tien-portfolio-website" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Source</a>
+              <a href="/" className="text-blue-500 hover:underline">Live Site</a>
+            </div>
           </div>
         </div>
       </section>
