@@ -1,31 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: rgba(255,255,255,1);
+  /* Light-mode background: slightly darker off-white gray so white boxes/header stand out */
+  --background: rgba(240,240,240,1); 
   --foreground: rgba(23,23,23,1);
   /* Theme macros for header and text box (preserve current visuals) */
-  --header-background: rgba(255,255,255,0.8); /* matches bg-white/80 */
-  --box-background: rgba(255,255,255,0.8); /* matches bg-white/80 */
+  --header-background: rgba(200,200,210,0.8);
+  --box-background: rgba(200,200,205,0.8); 
+  /* Toggle colors */
+  --toggle-off: rgba(209,213,219,1); /* gray-300 */
+  --toggle-on: rgba(55,65,81,1); /* gray-700 */
+  --toggle-knob: rgba(255,255,255,1); /* knob color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: rgba(35,39,47,1);
-    --foreground: rgba(237,237,237,1);
-    /* Dark theme values matching current hardcoded colors */
-    --header-background: rgba(38,40,43,1);
-    --box-background: rgba(48,49,52,1);
-  }
+/* class-based dark mode (toggled via document.documentElement.classList) */
+:root.dark,
+html.dark {
+  --background: rgba(32,33,36,1);
+  --foreground: rgba(237,237,237,1);
+  --header-background: rgba(38,40,45,1);
+  --box-background: rgba(48,48,55,1);
+  /* Dark-mode toggle overrides (if you want different colors in dark mode) */
+  --toggle-off: rgba(75,85,99,1); /* slightly lighter gray when dark */
+  --toggle-on: rgba(99,102,241,1); /* example accent for dark mode (indigo) */
+  --toggle-knob: rgba(255,255,255,1);
 }
+
+/* Fallback utility classes so bg-box / bg-header work immediately without requiring Tailwind to regenerate */
+.bg-box { background-color: var(--box-background); }
+.bg-header { background-color: var(--header-background); }
+
+/*
+  NOTE: removed a duplicated `@media (prefers-color-scheme: dark)` block that
+  repeated the same CSS custom properties defined above in `:root.dark`.
+
+  The app currently uses a class-based dark mode (ThemeToggle adds/removes
+  `document.documentElement.classList.add('dark')`). If you'd like a CSS-only
+  fallback for users without JS that respects system preference, re-add a
+  `@media (prefers-color-scheme: dark)` block here. For now the single source
+  of truth for dark variables is the `.dark` class definition above.
+*/
 
 body {
-  background-color: rgba(32,33,36,1);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 240ms linear, color 240ms linear;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgba(32,33,36,1);
-  }
+/* When `theme-transition` is present on the root element we apply
+   additional transition properties to make the theme swap fade smoothly. */
+:root.theme-transition,
+html.theme-transition {
+  /* Ramp up transition targets for a nicer fade */
+  transition: background-color 500ms ease, color 500ms ease;
+}
+
+/* Targets for common elements/utilities so boxes and headers also fade */
+.theme-transition .bg-box,
+.theme-transition .bg-header,
+.theme-transition .shadow,
+.theme-transition img {
+  transition: background-color 500ms ease, border-color 500ms ease, box-shadow 500ms ease, color 500ms ease;
 }
