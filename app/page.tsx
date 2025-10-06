@@ -1,7 +1,7 @@
 // import Link from "next/link";
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#202124] dark:bg-[#202124] text-gray-900 dark:text-gray-100">
+  <main className="min-h-screen bg-[rgba(32,33,36,1)] dark:bg-[rgba(32,33,36,1)] text-gray-900 dark:text-gray-100">
       {/* Header */}
   <header className="py-6 flex justify-center items-center border-b border-gray-200 dark:border-gray-700 bg-[var(--header-background)]">
         <div className="flex items-center gap-[50px]">
