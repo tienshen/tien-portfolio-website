@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-[#202124] dark:bg-[#202124] text-gray-900 dark:text-gray-100 flex items-center justify-center">
+  <main className="min-h-screen bg-[rgba(32,33,36,1)] dark:bg-[rgba(32,33,36,1)] text-gray-900 dark:text-gray-100 flex items-center justify-center">
       <section className="p-12 bg-gray-100/80 dark:bg-gray-800/80 rounded-2xl shadow mb-12">
         <h2 className="text-xl font-semibold mb-6 text-center">Projects</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
