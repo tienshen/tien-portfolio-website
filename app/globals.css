@@ -5,8 +5,8 @@
   --background: rgba(240,240,240,1); 
   --foreground: rgba(23,23,23,1);
   /* Theme macros for header and text box (preserve current visuals) */
-  --header-background: rgba(200,200,210,0.8);
-  --box-background: rgba(200,200,205,0.8); 
+  --header-background: rgba(210,210,230,0.8);
+  --box-background: rgba(220,220,230,0.8); 
   /* Toggle colors */
   --toggle-off: rgba(209,213,219,1); /* gray-300 */
   --toggle-on: rgba(55,65,81,1); /* gray-700 */
@@ -40,6 +40,10 @@ html.dark {
   `@media (prefers-color-scheme: dark)` block here. For now the single source
   of truth for dark variables is the `.dark` class definition above.
 */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--background);
