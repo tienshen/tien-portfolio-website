@@ -23,6 +23,11 @@ export default function ScrollingHeader() {
   const maxShift = -30
   const currentShift = Math.min(0, (scrollY / maxScroll) * maxShift)
 
+  // Calculate theme toggle scale - shrink from 1.0 to 0.8 as we scroll
+  const minScale = 0.8
+  const maxScale = 1.0
+  const currentScale = Math.max(minScale, maxScale - (scrollY / maxScroll) * (maxScale - minScale))
+
   return (
     <header 
       className="sticky top-0 relative border-b border-gray-200 dark:border-gray-700 bg-header px-8 z-40 transition-all duration-200 ease-out"
@@ -41,7 +46,10 @@ export default function ScrollingHeader() {
         </nav>
       </div>
       {/* toggle on the right */}
-      <div className="absolute right-4 top-1/2 -translate-y-1/2">
+      <div 
+        className="absolute right-4 top-1/2 -translate-y-1/2 transition-transform duration-200 ease-out"
+        style={{ transform: `scale(${currentScale})` }}
+      >
         <ThemeToggle />
       </div>
     </header>

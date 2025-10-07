@@ -5,19 +5,14 @@ export default function ThemeToggle() {
   const [isDark, setIsDark] = useState<boolean | null>(null)
 
   useEffect(() => {
-    // initialize from localStorage or system preference
+    // initialize from localStorage or default to dark mode
     const stored = localStorage.getItem('theme')
-    if (stored === 'dark') {
-      document.documentElement.classList.add('dark')
-      setIsDark(true)
-    } else if (stored === 'light') {
-      document.documentElement.classList.remove('dark')
+    if (stored === 'light') {
+      document.documentElement.classList.add('light')
       setIsDark(false)
     } else {
-      // DEFAULT: choose dark mode by default when there's no stored preference.
-      // If you prefer to respect system preference, switch back to using
-      // window.matchMedia('(prefers-color-scheme: dark)').matches
-      document.documentElement.classList.add('dark')
+      // Default to dark mode (no class needed, uses :root defaults)
+      document.documentElement.classList.remove('light')
       setIsDark(true)
     }
   }, [])
@@ -38,10 +33,12 @@ export default function ThemeToggle() {
     const next = !isDark
     setIsDark(next)
     if (next) {
-      document.documentElement.classList.add('dark')
+      // Dark mode: remove light class (uses :root defaults)
+      document.documentElement.classList.remove('light')
       localStorage.setItem('theme', 'dark')
     } else {
-      document.documentElement.classList.remove('dark')
+      // Light mode: add light class override
+      document.documentElement.classList.add('light')
       localStorage.setItem('theme', 'light')
     }
   }
@@ -62,10 +59,10 @@ export default function ThemeToggle() {
           toggle()
         }
       }}
-      className={`relative inline-flex items-center h-8 w-14 rounded-full transition-colors duration-500 focus:outline-none z-50 pointer-events-auto`}
+      className={`relative inline-flex items-center h-8 w-14 rounded-full transition-all duration-500 ease-in-out focus:outline-none z-50 pointer-events-auto hover:scale-105`}
       style={{ backgroundColor: isDark ? 'var(--toggle-on)' : 'var(--toggle-off)' }}>
       <span
-        className={`transform transition-transform duration-500 inline-block h-6 w-6 rounded-full shadow ${isDark ? 'translate-x-6' : 'translate-x-1'}`}
+        className={`transform transition-all duration-500 ease-in-out inline-block h-6 w-6 rounded-full shadow-lg hover:shadow-xl ${isDark ? 'translate-x-6 scale-110' : 'translate-x-1'}`}
         style={{ backgroundColor: 'var(--toggle-knob)' }}
       />
     </button>

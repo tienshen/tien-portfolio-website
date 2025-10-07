@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  /* Light-mode background: slightly darker off-white gray so white boxes/header stand out */
+  /* Default dark-mode variables (site defaults to dark) */
+  --background: rgba(32,33,36,1);
+  --foreground: rgba(237,237,237,1);
+
+  --header-background: rgba(38,40,45,0.95);
+  --box-background: rgba(48,48,55,0.95);
+  /* Toggle colors */
+  --toggle-off: rgba(75,85,99,1);
+  --toggle-on: rgba(99,102,241,1);
+  --toggle-knob: rgba(255,255,255,1);
+}
+
+/* Light mode override (toggled via document.documentElement.classList) */
+:root.light,
+html.light {
   --background: rgba(240,240,240,1); 
   --foreground: rgba(23,23,23,1);
   /* Theme macros for header and text box (preserve current visuals) */
-  --header-background: rgba(210,210,230,0.8);
-  --box-background: rgba(220,220,230,0.8); 
+  --header-background: rgba(225,225,235,0.95);
+  --box-background: rgba(220,220,230,0.95); 
   /* Toggle colors */
-  --toggle-off: rgba(209,213,219,1); /* gray-300 */
-  --toggle-on: rgba(55,65,81,1); /* gray-700 */
-  --toggle-knob: rgba(255,255,255,1); /* knob color */
-}
-
-/* class-based dark mode (toggled via document.documentElement.classList) */
-:root.dark,
-html.dark {
-  --background: rgba(32,33,36,1);
-  --foreground: rgba(237,237,237,1);
-  --header-background: rgba(38,40,45,1);
-  --box-background: rgba(48,48,55,1);
-  /* Dark-mode toggle overrides (if you want different colors in dark mode) */
-  --toggle-off: rgba(75,85,99,1); /* slightly lighter gray when dark */
-  --toggle-on: rgba(99,102,241,1); /* example accent for dark mode (indigo) */
+  --toggle-off: rgba(200,200,210,1);
+  --toggle-on: rgba(55,65,81,1);
   --toggle-knob: rgba(255,255,255,1);
 }
 
