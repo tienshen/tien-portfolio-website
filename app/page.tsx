@@ -25,10 +25,10 @@ export default function Home() {
   <section id="projects" className="p-8 bg-box mb-6 mx-[50px] rounded-2xl">
   <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
   <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div className="p-6 bg-box rounded-2xl shadow">
             <h3 className="text-lg font-bold mb-2">Active Window – UMass Senior Design Project</h3>
-              <img src="/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
+              <img src="/projects/active_window/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
             <p className="mb-2">
               <span className="text-xs text-gray-300">UMass Team 15: Tien Shen, Nathan Johnson, Michael Chan, Dingbang Chen</span>
             </p>
@@ -43,9 +43,23 @@ export default function Home() {
             </ul>
             <div className="flex flex-wrap gap-4">
               <a href="http://www.ecs.umass.edu/sdp/sdp21/team15/" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Project Website</a>
-              <a href="/SDP21SDPTeam15FinalReport.pdf" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Final Report (PDF)</a>
-              <a href="/FPRpresentation.pdf" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">FPR Slides (PDF)</a>
+              <a href="/projects/active_window/SDP21SDPTeam15FinalReport.pdf" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Final Report (PDF)</a>
+              <a href="/projects/active_window/FPRpresentation.pdf" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">FPR Slides (PDF)</a>
               <a href="https://youtu.be/YnCn2WRyxFA" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Demo Video</a>
+            </div>
+          </div>
+
+          <div className="p-6 bg-box rounded-2xl shadow">
+            <h3 className="text-lg font-bold mb-2">Multi-threaded HTTP Server</h3>
+            <p className="mb-2">High-performance HTTP server implemented in C with multi-threading support, socket programming, and concurrent request handling. Features custom HTTP parsing, thread pool management, and efficient resource serving.</p>
+            <ul className="mb-2 list-disc list-inside text-sm">
+              <li>C programming & POSIX threads</li>
+              <li>Socket programming (TCP/IP)</li>
+              <li>HTTP protocol implementation</li>
+              <li>Thread pool & concurrency control</li>
+            </ul>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://github.com/tienshen/Multi-threaded-Server-Project" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Source</a>
             </div>
           </div>
 
