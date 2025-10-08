@@ -26,7 +26,7 @@ export default function Home() {
   <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
   <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          <div className="p-6 bg-box rounded-2xl shadow">
+          <div className="p-6 bg-box rounded-2xl shadow hover:shadow-lg transition-shadow">
             <h3 className="text-lg font-bold mb-2">Active Window – UMass Senior Design Project</h3>
               <img src="/projects/active_window/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
             <p className="mb-2">
@@ -42,9 +42,8 @@ export default function Home() {
               <li>Custom PCB design</li>
             </ul>
             <div className="flex flex-wrap gap-4">
-              <a href="http://www.ecs.umass.edu/sdp/sdp21/team15/" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Project Website</a>
-              <a href="/projects/active_window/SDP21SDPTeam15FinalReport.pdf" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Final Report (PDF)</a>
-              <a href="/projects/active_window/FPRpresentation.pdf" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">FPR Slides (PDF)</a>
+              <a href="/projects/active-window" className="text-base text-blue-500 hover:underline font-semibold">View Project Details →</a>
+              <a href="http://www.ecs.umass.edu/sdp/sdp21/team15/" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Original Website</a>
               <a href="https://youtu.be/YnCn2WRyxFA" target="_blank" rel="noopener noreferrer" className="text-base text-blue-500 hover:underline">Demo Video</a>
             </div>
           </div>

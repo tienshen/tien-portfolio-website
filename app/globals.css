@@ -4,6 +4,8 @@
   /* Default dark-mode variables (site defaults to dark) */
   --background: rgba(32,33,36,1);
   --foreground: rgba(237,237,237,1);
+  --text-secondary: rgba(156,163,175,1); /* gray-400 for dark mode */
+  --text-muted: rgba(107,114,128,1); /* gray-500 for dark mode */
 
   --header-background: rgba(38,40,45,0.95);
   --box-background: rgba(48,48,55,0.95);
@@ -18,6 +20,8 @@
 html.light {
   --background: rgba(240,240,240,1); 
   --foreground: rgba(23,23,23,1);
+  --text-secondary: rgba(55,65,81,1); /* gray-700 for light mode */
+  --text-muted: rgba(75,85,99,1); /* gray-600 for light mode */
   /* Theme macros for header and text box (preserve current visuals) */
   --header-background: rgba(225,225,235,0.95);
   --box-background: rgba(220,220,230,0.95); 
@@ -30,6 +34,8 @@ html.light {
 /* Fallback utility classes so bg-box / bg-header work immediately without requiring Tailwind to regenerate */
 .bg-box { background-color: var(--box-background); }
 .bg-header { background-color: var(--header-background); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
 
 /*
   NOTE: removed a duplicated `@media (prefers-color-scheme: dark)` block that
