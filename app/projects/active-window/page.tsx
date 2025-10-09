@@ -140,12 +140,29 @@ export default function ActiveWindowProject() {
 
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-box">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        {/* Collage background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="grid grid-cols-2 h-full">
+            <div className="relative">
+              <img src="/projects/active-window/pcb_design_0.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="relative">
+              <img src="/projects/active-window/product_image_0.jpeg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
+            <img src="/projects/active-window/product_image_1.jpeg" alt="" className="w-full h-full object-cover" />
+          </div>
+        </div>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Active Window
             </h1>
-            <p className="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-md">
               Smart Building Automation System with CAN Bus Communication
             </p>
             <div className="flex flex-wrap justify-center gap-3">

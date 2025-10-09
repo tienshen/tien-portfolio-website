@@ -26,9 +26,31 @@ export default function Home() {
   <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
   <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-            <h3 className="text-lg font-bold mb-2">Active Window – UMass Senior Design Project</h3>
-              <img src="/projects/active-window/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow overflow-hidden">
+            {/* Title with collage background */}
+            <div className="relative -mx-6 -mt-6 mb-4 p-6 pt-8 rounded-t-2xl overflow-hidden">
+              {/* Collage background */}
+              <div className="absolute inset-0 opacity-20">
+                <div className="grid grid-cols-2 h-full">
+                  <div className="relative">
+                    <img src="/projects/active-window/pcb_design_0.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+                  </div>
+                  <div className="relative">
+                    <img src="/projects/active-window/product_image_0.jpeg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-1/2 grid grid-cols-2">
+                  <img src="/projects/active-window/system_diagram.png" alt="" className="w-full h-full object-cover opacity-60" />
+                  <img src="/projects/active-window/product_image_1.jpeg" alt="" className="w-full h-full object-cover" />
+                </div>
+              </div>
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50"></div>
+              {/* Title text */}
+              <h3 className="relative text-lg font-bold text-white drop-shadow-lg">Active Window – UMass Senior Design Project</h3>
+            </div>
+            
+            <img src="/projects/active-window/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
             <p className="mb-2">
               <span className="text-xs text-gray-300">UMass Team 15: Tien Shen, Nathan Johnson, Michael Chan, Dingbang Chen</span>
             </p>
