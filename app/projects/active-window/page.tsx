@@ -19,19 +19,31 @@ export default function ActiveWindowProject() {
   const teamMembers = [
     {
       name: 'Michael Chan',
-      major: 'EE'
+      major: 'EE',
+      role: 'Hardware Engineer & Testing Lead',
+      contributions: 'CAN protocol implementation,  power distribution analysis, requirements validation,component sourcing',
+      image: '/projects/active-window/mike.jpg'
     },
     {
       name: 'Dingbang Chen',
-      major: 'CompE'
+      major: 'CompE',
+      role: 'Software Architecture',
+      contributions: 'Firmware development, stepper motor integration, mechanical calibration',
+      image: '/projects/active-window/Dingbang.jpg'
     },
     {
       name: 'Nathan Johnson',
-      major: 'CompE'
+      major: 'CompE',
+      role: 'Mechanical Design Engineer',
+      contributions: 'Network topology design, interrupt handling, Firmware development, performance testing',
+      image: '/projects/active-window/nathan.jpg'
     },
     {
       name: 'Tien Shen',
-      major: 'CompE'
+      major: 'CompE',
+      role: 'Project Lead & System Integration',
+      contributions: 'Sensor integration & algorithm, PCB design, window assembly fabrication, Team coordination',
+      image: '/projects/active-window/tien.jpg'
     }
   ];
 
@@ -107,13 +119,14 @@ export default function ActiveWindowProject() {
               </svg>
               <span>Back to Portfolio</span>
             </Link>
-            <nav className="text-sm text-muted">
+            <nav className="text-sm text-muted absolute left-1/2 transform -translate-x-1/2">
               <Link href="/" className="hover:text-[var(--foreground)]">Portfolio</Link>
               <span className="mx-2">/</span>
               <Link href="/#projects" className="hover:text-[var(--foreground)]">Projects</Link>
               <span className="mx-2">/</span>
               <span className="text-[var(--foreground)]">Active Window</span>
             </nav>
+            <div></div>
           </div>
         </div>
         {/* Theme toggle on the right */}
@@ -129,7 +142,7 @@ export default function ActiveWindowProject() {
       <div className="relative overflow-hidden bg-box">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold !text-gray-900 dark:!text-white mb-6">
               Active Window
             </h1>
             <p className="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto">
@@ -158,6 +171,60 @@ export default function ActiveWindowProject() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Impact & Context Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-8">Project Impact & Significance</h2>
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="bg-box rounded-2xl p-6 shadow">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 mx-auto bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-3">
+                  <svg className="w-8 h-8 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-2">Climate Challenge</h3>
+              </div>
+              <p className="text-secondary text-sm leading-relaxed">
+                Global electricity consumption per capita rose <strong>2.6x from 1971-2014</strong> (1,200 to 3,132 kWh), 
+                with <strong>89.6% from non-renewable sources</strong>. Building automation can significantly reduce operational 
+                costs and carbon emissions through improved energy efficiency.
+              </p>
+            </div>
+            
+            <div className="bg-box rounded-2xl p-6 shadow">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 mx-auto bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-3">
+                  <svg className="w-8 h-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-2">Market Problem</h3>
+              </div>
+              <p className="text-secondary text-sm leading-relaxed">
+                Current solutions are <strong>manufacturer-specific and expensive</strong> (Honeywell, Siemens), 
+                or use <strong>unreliable wireless communication</strong> with monthly subscription fees. 
+                Limited adoption due to high costs and proprietary lock-in.
+              </p>
+            </div>
+            
+            <div className="bg-box rounded-2xl p-6 shadow">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 mx-auto bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-3">
+                  <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-2">Our Solution</h3>
+              </div>
+              <p className="text-secondary text-sm leading-relaxed">
+                <strong>Open-source, low-cost system</strong> using reliable wired CAN bus communication. 
+                Designed for <strong>widespread adoption</strong> to create non-negligible impact on 
+                residential greenhouse gas emissions through affordable smart building automation.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Project Overview */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-8">Project Overview</h2>
@@ -235,35 +302,388 @@ export default function ActiveWindowProject() {
 
         {/* Prototype Description */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-8">Prototype Description</h2>
+          <h2 className="text-3xl font-bold mb-8">System Architecture & Implementation</h2>
           <div className="bg-box rounded-2xl p-8 shadow">
-            <p className="text-secondary leading-relaxed mb-6">
-              Five XMC4200 boards connected together using the physical layer. Inputs to one XMC4200 board include various 
-              sensors (temperature, light, and motion). Outputs to one XMC4200 board include stepper motors and lights.
-            </p>
-            <p className="text-secondary leading-relaxed mb-6">
-              The goal of this prototype is to demonstrate a basic smart home setup. There are four boards on the edge of 
-              the network that collect sensor data and show output by moving a stepper motor assembly. The stepper motors 
-              are connected to a simple, scaled down window assembly.
-            </p>
-            <div className="grid md:grid-cols-3 gap-4 mt-8">
-              <div className="text-center">
-                <div className="bg-blue-100 dark:bg-blue-900/30 rounded-lg p-6 mb-3">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">5</div>
-                </div>
-                <p className="text-sm text-muted">XMC4200 Boards</p>
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Distributed Network Design</h3>
+                <p className="text-secondary leading-relaxed mb-4">
+                  The prototype demonstrates a <strong>dual-network architecture</strong> with five XMC4200 boards. 
+                  The system is divided into left and right networks, each powered by 16V and housed in electrical boxes 
+                  for safety and organization.
+                </p>
+                <p className="text-secondary leading-relaxed mb-4">
+                  A central <strong>repeater board</strong> with dual PCB transceivers enables message forwarding between 
+                  networks, creating seamless communication across the entire system while maintaining network isolation 
+                  for fault tolerance.
+                </p>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 dark:bg-green-900/30 rounded-lg p-6 mb-3">
-                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">CAN</div>
-                </div>
-                <p className="text-sm text-muted">Bus Protocol</p>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Smart Sensor Integration</h3>
+                <p className="text-secondary leading-relaxed mb-4">
+                  Three sensor types provide comprehensive environmental monitoring: <strong>TMP36 temperature sensors</strong> 
+                  (calibrated against reference thermometer), <strong>photoresistors</strong> for light detection, 
+                  and <strong>water level sensors</strong> for rain detection.
+                </p>
+                <p className="text-secondary leading-relaxed mb-4">
+                  <strong>28BYJ-48 stepper motors</strong> with ULN2003 drivers provide precise window and blind control 
+                  with excellent holding torque for safety. Custom-built 6"x4" balsa wood windows with plexiglass 
+                  and cloth blinds demonstrate real-world applications.
+                </p>
               </div>
-              <div className="text-center">
-                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-lg p-6 mb-3">
-                  <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">IoT</div>
+            </div>
+            
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">Interrupt-Driven Real-Time System</h3>
+              <p className="text-secondary text-sm leading-relaxed">
+                The software architecture uses <strong>interrupt-driven programming</strong> for optimal performance. 
+                Timer interrupts fire every 10ms for sensor readings, while network interrupts handle incoming CAN messages. 
+                This approach minimizes CPU overhead and ensures responsive system behavior across all distributed nodes.
+              </p>
+            </div>
+
+            {/* Demo Video Section */}
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-4 text-center">Live System Demonstration</h3>
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <iframe
+                    src="https://www.youtube.com/embed/YnCn2WRyxFA"
+                    title="Active Window Smart Home Demo"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <p className="text-sm text-muted">Smart Home Demo</p>
+                <div className="mt-4 text-center">
+                  <h4 className="font-semibold mb-2">System Demo Video</h4>
+                  <p className="text-secondary text-sm">
+                    Watch the complete Active Window system in action, demonstrating automated window control, 
+                    sensor integration, and CAN bus communication between XMC4200 boards.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technical Achievements Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-8">Technical Achievements & Performance</h2>
+          
+          {/* Key Metrics */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-box rounded-2xl p-6 shadow text-center">
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">1000ft</div>
+              <div className="text-secondary text-sm">Maximum Range</div>
+              <div className="text-muted text-xs mt-1">Node-to-node distance</div>
+            </div>
+            <div className="bg-box rounded-2xl p-6 shadow text-center">
+              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">10ms</div>
+              <div className="text-secondary text-sm">Response Time</div>
+              <div className="text-muted text-xs mt-1">Interrupt-driven system</div>
+            </div>
+            <div className="bg-box rounded-2xl p-6 shadow text-center">
+              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">16V</div>
+              <div className="text-secondary text-sm">Bus Voltage</div>
+              <div className="text-muted text-xs mt-1">Custom power system</div>
+            </div>
+            <div className="bg-box rounded-2xl p-6 shadow text-center">
+              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">0%</div>
+              <div className="text-secondary text-sm">Packet Loss</div>
+              <div className="text-muted text-xs mt-1">Under nominal conditions</div>
+            </div>
+          </div>
+
+          {/* Requirements Status */}
+          <div className="bg-box rounded-2xl p-8 shadow">
+            <h3 className="text-2xl font-semibold mb-6">Requirements Achievement Status</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-green-600 dark:text-green-400 mb-4 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Fully Achieved
+                </h4>
+                <ul className="space-y-2 text-secondary text-sm">
+                  <li>✅ <strong>Logic Definition</strong> - Clear logic 1 and 0 states</li>
+                  <li>✅ <strong>CAN Bus Support</strong> - Hardware-accelerated communication</li>
+                  <li>✅ <strong>Tree Topology</strong> - Flexible network architecture</li>
+                  <li>✅ <strong>Broadcast Messaging</strong> - Network-wide communication</li>
+                  <li>✅ <strong>Reliability</strong> - Zero dropped packets achieved</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-yellow-600 dark:text-yellow-400 mb-4 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  Partially Met
+                </h4>
+                <ul className="space-y-2 text-secondary text-sm">
+                  <li>⚠️ <strong>Power Consumption</strong> - &lt;5mA target limited by dev board overhead</li>
+                  <li>⚠️ <strong>Point-to-Point Messaging</strong> - Broadcast implemented, P2P pending</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technical Design Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-8">Technical Design & Implementation</h2>
+          
+          {/* Product Images */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold mb-6">Physical Implementation</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="relative group cursor-pointer">
+                  <Image
+                    src="/projects/active-window/product_image_0.jpeg"
+                    alt="Prototype Hardware Setup"
+                    width={500}
+                    height={350}
+                    className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
+                    onClick={() => setSelectedImage('/projects/active-window/product_image_0.jpeg')}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+                <h4 className="font-semibold mt-4 mb-2">Prototype Setup</h4>
+                <p className="text-secondary text-sm">Complete prototype setup with XMC4200 boards and sensors</p>
+              </div>
+              
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="relative group cursor-pointer">
+                  <Image
+                    src="/projects/active-window/product_image_1.jpeg"
+                    alt="Window Actuator Assembly"
+                    width={500}
+                    height={350}
+                    className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
+                    onClick={() => setSelectedImage('/projects/active-window/product_image_1.jpeg')}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+                <h4 className="font-semibold mt-4 mb-2">Window Assembly</h4>
+                <p className="text-secondary text-sm">Motorized window assembly demonstrating automated control system</p>
+              </div>
+            </div>
+          </div>
+
+          {/* System Diagrams */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold mb-6">System Architecture</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="relative group cursor-pointer">
+                  <Image
+                    src="/projects/active-window/system_diagram.png"
+                    alt="System Architecture Diagram"
+                    width={500}
+                    height={350}
+                    className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
+                    onClick={() => setSelectedImage('/projects/active-window/system_diagram.png')}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+                <h4 className="font-semibold mt-4 mb-2">System Diagram</h4>
+                <p className="text-secondary text-sm">Overall system architecture showing component interactions and data flow</p>
+              </div>
+              
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="relative group cursor-pointer">
+                  <Image
+                    src="/projects/active-window/tranceiver_diagram.jpg"
+                    alt="Transceiver Circuit Diagram"
+                    width={500}
+                    height={350}
+                    className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
+                    onClick={() => setSelectedImage('/projects/active-window/tranceiver_diagram.jpg')}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+                <h4 className="font-semibold mt-4 mb-2">CAN Transceiver Circuit</h4>
+                <p className="text-secondary text-sm">Custom CAN transceiver circuit design for smart building networks</p>
+              </div>
+            </div>
+          </div>
+
+          {/* PCB Design */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold mb-6">PCB Design & Hardware</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="relative group cursor-pointer">
+                  <Image
+                    src="/projects/active-window/pcb_design_0.jpg"
+                    alt="PCB Design Layout"
+                    width={400}
+                    height={100}
+                    className="rounded-lg w-full h-full object-cover hover:scale-105 transition-transform"
+                    onClick={() => setSelectedImage('/projects/active-window/pcb_design_0.jpg')}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+                <h4 className="font-semibold mt-4 mb-2">PCB Schematic Design</h4>
+                <p className="text-secondary text-sm">Custom PCB Schematic optimized for CAN bus communication and power efficiency</p>
+              </div>
+              
+              <div className="bg-box rounded-2xl p-6 shadow">
+                <div className="relative group cursor-pointer">
+                  <Image
+                    src="/projects/active-window/pcb_design_1.jpg"
+                    alt="PCB Implementation"
+                    width={400}
+                    height={250}
+                    className="rounded-lg w-full h-auto object-cover hover:scale-105 transition-transform"
+                    onClick={() => setSelectedImage('/projects/active-window/pcb_design_1.jpg')}
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
+                      Click to enlarge
+                    </div>
+                  </div>
+                </div>
+                <h4 className="font-semibold mt-4 mb-2">PCB Layout Design</h4>
+                <p className="text-secondary text-sm">Custom PCB layout optimized for CAN bus communication and power efficiency</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Performance Testing & Hardware Deep-Dive */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-8">Performance Testing & Hardware Specifications</h2>
+          
+          {/* Performance Testing */}
+          <div className="bg-box rounded-2xl p-8 shadow mb-8">
+            <h3 className="text-xl font-semibold mb-6 text-blue-600 dark:text-blue-400">Frequency Analysis & Response Testing</h3>
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-semibold mb-3">Network Performance Metrics</h4>
+                <ul className="space-y-2 text-secondary">
+                  <li className="flex justify-between">
+                    <span>Message Transmission Range:</span>
+                    <span className="font-semibold">1000+ feet</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Network Response Time:</span>
+                    <span className="font-semibold">10ms average</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Packet Loss Rate:</span>
+                    <span className="font-semibold text-green-600 dark:text-green-400">0%</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Bus Voltage:</span>
+                    <span className="font-semibold">16V stable</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Sensor Calibration Results</h4>
+                <ul className="space-y-2 text-secondary">
+                  <li className="flex justify-between">
+                    <span>Temperature Accuracy:</span>
+                    <span className="font-semibold">±1°C (calibrated)</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Light Sensor Range:</span>
+                    <span className="font-semibold">0-1024 ADC values</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Stepper Motor Precision:</span>
+                    <span className="font-semibold">2048 steps/revolution</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>System Update Frequency:</span>
+                    <span className="font-semibold">100Hz (10ms interrupts)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Custom PCB Design */}
+          <div className="bg-box rounded-2xl p-8 shadow">
+            <h3 className="text-xl font-semibold mb-6 text-green-600 dark:text-green-400">Custom PCB Design & Implementation</h3>
+            <div className="grid lg:grid-cols-3 gap-6">
+              <div className="lg:col-span-2">
+                <p className="text-secondary leading-relaxed mb-4">
+                  Developed a <strong>custom PCB design</strong> that serves as the foundation for our distributed 
+                  network architecture. The board features an integrated CAN transceiver, power regulation circuitry, 
+                  and standardized sensor/actuator interfaces.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mt-4">
+                  <div>
+                    <h4 className="font-semibold mb-2 text-sm">Key Components</h4>
+                    <ul className="text-sm text-secondary space-y-1">
+                      <li>• XMC4200 microcontroller</li>
+                      <li>• MCP2551 CAN transceiver</li>
+                      <li>• LM7805 voltage regulator</li>
+                      <li>• Status LED indicators</li>
+                      <li>• Screw terminal blocks</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-sm">Design Features</h4>
+                    <ul className="text-sm text-secondary space-y-1">
+                      <li>• Isolated power domains</li>
+                      <li>• ESD protection circuits</li>
+                      <li>• Modular sensor interfaces</li>
+                      <li>• Debug header access</li>
+                      <li>• Compact form factor</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-slate-50/50 to-blue-50/50 dark:from-gray-800/20 dark:to-blue-900/10 rounded-lg p-4 border border-slate-100/50 dark:border-gray-700">
+                <h4 className="font-semibold mb-2 text-sm">Technical Specs</h4>
+                <div className="space-y-2 text-xs text-secondary">
+                  <div className="flex justify-between">
+                    <span>Operating Voltage:</span>
+                    <span className="font-semibold">5V/16V dual rail</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>CAN Speed:</span>
+                    <span className="font-semibold">250 kbps</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>PCB Layers:</span>
+                    <span className="font-semibold">2-layer design</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Board Size:</span>
+                    <span className="font-semibold">80mm x 60mm</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Connector Type:</span>
+                    <span className="font-semibold">Phoenix terminal</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -279,13 +699,47 @@ export default function ActiveWindowProject() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-[var(--background)] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                    {member.name.split(' ').map(n => n[0]).join('')}
+                  <div className="w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full border-2 border-blue-200 dark:border-blue-800 cursor-pointer hover:scale-105 transition-transform">
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} - Team Member`}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                      onClick={() => setSelectedImage(member.image)}
+                    />
                   </div>
                   <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">{member.major}</p>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium text-sm mb-2">{member.role}</p>
+                  <p className="text-secondary text-xs mb-1">{member.major}</p>
+                  <p className="text-muted text-xs leading-relaxed">{member.contributions}</p>
                 </div>
               ))}
+            </div>
+            
+            {/* Team Achievement Highlights */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg">
+              <h4 className="font-semibold mb-4 text-center">Collaborative Achievement Highlights</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h5 className="font-semibold mb-2 text-sm text-green-600 dark:text-green-400">Hardware Excellence</h5>
+                  <ul className="text-xs text-secondary space-y-1">
+                    <li>• Custom PCB design from concept to manufacturing</li>
+                    <li>• Robust power distribution with 16V bus system</li>
+                    <li>• Modular sensor interfaces for scalability</li>
+                    <li>• Professional-grade component selection and sourcing</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold mb-2 text-sm text-blue-600 dark:text-blue-400">Software Innovation</h5>
+                  <ul className="text-xs text-secondary space-y-1">
+                    <li>• Real-time interrupt-driven architecture</li>
+                    <li>• Reliable CAN bus protocol implementation</li>
+                    <li>• Advanced sensor calibration algorithms</li>
+                    <li>• Zero packet loss network performance</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>

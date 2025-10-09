@@ -28,7 +28,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div className="p-6 bg-box rounded-2xl shadow hover:shadow-lg transition-shadow">
             <h3 className="text-lg font-bold mb-2">Active Window – UMass Senior Design Project</h3>
-              <img src="/projects/active_window/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
+              <img src="/projects/active-window/active-window-project-group.jpeg" alt="Active Window Project Group" className="w-full h-64 object-cover rounded-xl mb-0" />
             <p className="mb-2">
               <span className="text-xs text-gray-300">UMass Team 15: Tien Shen, Nathan Johnson, Michael Chan, Dingbang Chen</span>
             </p>
