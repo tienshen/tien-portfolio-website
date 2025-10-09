@@ -4,6 +4,7 @@ import ThemeToggle from './ThemeToggle'
 
 export default function ScrollingHeader() {
   const [scrollY, setScrollY] = useState(0)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -11,21 +12,53 @@ export default function ScrollingHeader() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+
+
+  // Intersection Observer to track which section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      // Find the section with the highest intersection ratio
+      let maxRatio = 0
+      let mostVisibleSection = ''
+      
+      // Check all currently intersecting sections
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio
+          mostVisibleSection = entry.target.id
+        }
+      })
+      
+      // Only update if we found a visible section
+      if (mostVisibleSection) {
+        setActiveSection(mostVisibleSection)
+      }
+    }, {
+      rootMargin: '-20% 0px -20% 0px',
+      threshold: [0.1, 0.3, 0.5, 0.7, 1.0]
+    })
+
+    // Find and observe all sections
+    const sections = document.querySelectorAll('section[id]')
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   // Calculate padding based on scroll position
   // Shrink from py-3 (12px) to py-2 (8px) over first 150px of scroll
-  const maxScroll = 150
-  const minPadding = 5  // py-2
-  const maxPadding = 12 // py-3
+  const maxScroll = 100
+  const minPadding = 1  // py-2
+  const maxPadding = 5 // py-3
   const currentPadding = Math.max(minPadding, maxPadding - (scrollY / maxScroll) * (maxPadding - minPadding))
 
-  // Calculate horizontal shift - move content left as we scroll
-  // Shift from center (0px) to left (-100px) over first 150px of scroll
-  const maxShift = -30
-  const currentShift = Math.min(0, (scrollY / maxScroll) * maxShift)
+
 
   // Calculate theme toggle scale - shrink from 1.0 to 0.8 as we scroll
   const minScale = 0.8
-  const maxScale = 1.0
+  const maxScale = 0.9
   const currentScale = Math.max(minScale, maxScale - (scrollY / maxScroll) * (maxScale - minScale))
 
   return (
@@ -33,24 +66,56 @@ export default function ScrollingHeader() {
       className="sticky top-0 relative border-b border-gray-200 dark:border-gray-700 bg-header px-8 z-40 transition-all duration-200 ease-out"
       style={{ paddingTop: `${currentPadding}px`, paddingBottom: `${currentPadding}px` }}
     >
-      {/* centered content */}
-      <div 
-        className="mx-auto flex items-center gap-[50px] max-w-5xl justify-center transition-transform duration-200 ease-out"
-        style={{ transform: `translateX(${currentShift}px)` }}
-      >
-        <h1 className="text-2xl font-bold">Tien Shen</h1>
+      <div className="mx-auto flex items-center justify-between max-w-7xl">
+        {/* Name on the left */}
+        <h1 
+          className="text-2xl font-bold cursor-pointer hover:text-blue-500 transition-colors duration-200"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          Tien Shen
+        </h1>
+        
+        {/* Navigation in the center */}
         <nav className="space-x-6">
-          <a href="#about" className="hover:text-blue-500">About</a>
-          <a href="#projects" className="hover:text-blue-500">Projects</a>
-          <a href="#contact" className="hover:text-blue-500">Contact</a>
+          <a 
+            href="#about" 
+            className={`transition-colors duration-300 ${activeSection === 'about' ? 'text-blue-500 font-medium' : 'hover:text-blue-500'}`}
+          >
+            About
+          </a>
+          <a 
+            href="#projects" 
+            className={`transition-colors duration-300 ${activeSection === 'projects' ? 'text-blue-500 font-medium' : 'hover:text-blue-500'}`}
+          >
+            Projects
+          </a>
+          <a 
+            href="#experience" 
+            className={`transition-colors duration-300 ${activeSection === 'experience' ? 'text-blue-500 font-medium' : 'hover:text-blue-500'}`}
+          >
+            Experience
+          </a>
+          <a 
+            href="#education" 
+            className={`transition-colors duration-300 ${activeSection === 'education' ? 'text-blue-500 font-medium' : 'hover:text-blue-500'}`}
+          >
+            Education
+          </a>
+          <a 
+            href="#contact" 
+            className={`transition-colors duration-300 ${activeSection === 'contact' ? 'text-blue-500 font-medium' : 'hover:text-blue-500'}`}
+          >
+            Contact
+          </a>
         </nav>
-      </div>
-      {/* toggle on the right */}
-      <div 
-        className="absolute right-4 top-1/2 -translate-y-1/2 transition-transform duration-200 ease-out"
-        style={{ transform: `scale(${currentScale})` }}
-      >
-        <ThemeToggle />
+        
+        {/* Theme toggle on the right */}
+        <div 
+          className="transition-transform duration-200 ease-out"
+          style={{ transform: `scale(${currentScale})` }}
+        >
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )

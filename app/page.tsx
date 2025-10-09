@@ -128,7 +128,7 @@ export default function Home() {
       <section id="experience" className="p-8 bg-box mb-6 mx-[50px] rounded-2xl">
         <h2 className="text-2xl font-bold mb-6 text-center">Professional Experience</h2>
         <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8 max-w-6xl mx-auto">
           
           {/* Raytheon Position */}
           <div className="bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
@@ -207,20 +207,18 @@ export default function Home() {
       <section id="education" className="p-8 bg-box mb-6 mx-[50px] rounded-2xl">
         <h2 className="text-2xl font-bold mb-6 text-center">Education</h2>
         <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
-        <div className="space-y-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           
           {/* Master's Degree */}
           <div className="bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-accent">Master of Science in Computer Engineering</h3>
-                <p className="text-lg font-semibold text-[var(--foreground)]">University of Massachusetts Amherst</p>
-                <p className="text-sm text-secondary">College of Engineering</p>
-              </div>
-              <span className="text-sm font-medium text-muted mt-2 md:mt-0">May 2023</span>
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-accent mb-2">Master of Science in Computer Engineering</h3>
+              <p className="text-lg font-semibold text-[var(--foreground)] mb-1">University of Massachusetts Amherst</p>
+              <p className="text-sm text-secondary mb-3">College of Electrical and Computer Engineering</p>
+              <span className="text-sm font-medium text-muted">May 2023</span>
             </div>
-            <div className="mt-4">
-              <p className="text-sm text-secondary mb-2"><strong>Relevant Coursework:</strong></p>
+            <div>
+              <p className="text-sm text-secondary mb-3"><strong>Relevant Coursework:</strong></p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 tag rounded-full text-xs font-medium">Advanced Digital Design</span>
                 <span className="px-3 py-1 tag rounded-full text-xs font-medium">Computer Architecture</span>
@@ -233,16 +231,14 @@ export default function Home() {
 
           {/* Bachelor's Degree */}
           <div className="bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-accent">Bachelor of Science in Computer Engineering</h3>
-                <p className="text-lg font-semibold text-[var(--foreground)]">University of Massachusetts Amherst</p>
-                <p className="text-sm text-secondary">College of Engineering</p>
-              </div>
-              <span className="text-sm font-medium text-muted mt-2 md:mt-0">May 2021</span>
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-accent mb-2">Bachelor of Science in Computer Engineering</h3>
+              <p className="text-lg font-semibold text-[var(--foreground)] mb-1">University of Massachusetts Amherst</p>
+              <p className="text-sm text-secondary mb-3">College of Electrical and Computer Engineering</p>
+              <span className="text-sm font-medium text-muted">May 2021</span>
             </div>
-            <div className="mt-4">
-              <p className="text-sm text-secondary mb-2"><strong>Foundation Coursework:</strong></p>
+            <div>
+              <p className="text-sm text-secondary mb-3"><strong>Foundation Coursework:</strong></p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 tag rounded-full text-xs font-medium">Digital Logic Design</span>
                 <span className="px-3 py-1 tag rounded-full text-xs font-medium">Computer Systems</span>
