@@ -265,7 +265,7 @@ export default function ActiveWindowProject() {
                   className="rounded-lg w-full h-auto cursor-pointer hover:scale-105 transition-transform shadow-lg"
                   onClick={() => setSelectedImage('/projects/active-window/active-window-project-group.jpeg')}
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                   <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                     Click to enlarge
                   </div>
@@ -449,7 +449,7 @@ export default function ActiveWindowProject() {
                     className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
                     onClick={() => setSelectedImage('/projects/active-window/product_image_0.jpeg')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                     <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                       Click to enlarge
                     </div>
@@ -469,7 +469,7 @@ export default function ActiveWindowProject() {
                     className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
                     onClick={() => setSelectedImage('/projects/active-window/product_image_1.jpeg')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                     <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                       Click to enlarge
                     </div>
@@ -495,7 +495,7 @@ export default function ActiveWindowProject() {
                     className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
                     onClick={() => setSelectedImage('/projects/active-window/system_diagram.png')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                     <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                       Click to enlarge
                     </div>
@@ -515,7 +515,7 @@ export default function ActiveWindowProject() {
                     className="rounded-lg w-full h-auto hover:scale-105 transition-transform"
                     onClick={() => setSelectedImage('/projects/active-window/tranceiver_diagram.jpg')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                     <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                       Click to enlarge
                     </div>
@@ -541,7 +541,7 @@ export default function ActiveWindowProject() {
                     className="rounded-lg w-full h-full object-cover hover:scale-105 transition-transform"
                     onClick={() => setSelectedImage('/projects/active-window/pcb_design_0.jpg')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                     <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                       Click to enlarge
                     </div>
@@ -561,7 +561,7 @@ export default function ActiveWindowProject() {
                     className="rounded-lg w-full h-auto object-cover hover:scale-105 transition-transform"
                     onClick={() => setSelectedImage('/projects/active-window/pcb_design_1.jpg')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
                     <div className="bg-white/90 dark:bg-gray-800/90 px-4 py-2 rounded-full text-sm font-medium">
                       Click to enlarge
                     </div>
