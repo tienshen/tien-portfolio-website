@@ -1,0 +1,54 @@
+Tien Li Shen
+Email: timshen1999@gmail.com          Phone: (774) 274-2712           
+Home: Quincy, Massachusetts      Security Clearance Level: Secret
+Systems Engineer with a strong background in software safety, digital design verification, and embedded systems. Experienced in safety analysis for complex defense systems, formal verification of FPGA toolchains, and UVM-based SoC validation. MS in Computer Engineering with hands-on skills in C++, Python, SystemVerilog, and safety-critical analysis. Passionate about building safe, reliable systems that drive innovation in aerospace and defense.
+
+PROFESSIONAL EXPERIENCES
+RTX | Raytheon Missiles and Defense, Tewksbury, MA 
+Systems Engineer II, October 2023 - April 2025
+Served as Safety Lead on new system concept proposals of the Patriot SAM system, including the Warfighter Machine Interface, Radar Surveillance, Guidance, Command and Control, and Tactical Initialization.
+Analyzed 170+ Software Investigation Reports, 110+ safety-critical software updates, and 40+ system requirement changes—identifying over 30 potential safety hazards and ensuring appropriate mitigation and rigor in hazard tracking.
+Collaborated with safety, systems, and validation engineers to produce and deliver a comprehensive Patriot Safety Assessment Report to customers, in compliance with Military Standards 882E.
+Intel Corporation, Hudson, MA
+DDRIO Pre-Silicon Design Verification Intern, May 2022 - August 2022
+Implemented UVM monitor and checker in SystemVerilog to validate DLL phase power optimization features across 30 instantiations in DDRIO, enabling a new power-saving feature to be released on the next-gen Intel server processor.
+Contributed to CI/CD initiatives by optimizing regression test sets, improving test execution efficiency, and streamlining the testing-release pipeline to accelerate delivery without compromising quality.
+Developed a Python tool to compare register specs between source code and Excel files, identifying over 200 discrepancies used across RTL, validation, and analog teams.
+Reconfigurable Computing Group, University of Massachusetts Amherst
+Graduate Research Assistant, August 2021 - May 2022
+Collaborated with a team of 4 graduate students to formally verify the open-source Symbiflow FPGA toolchain and delivered the software product to our sponsor.
+Implemented software changes and scripts to formally verified Yosys hardware synthesis software with Cadence Conformal LEC on 120 benchmark designs.
+Verified 21 benchmark designs synthesized by open-source software Yosys functioning on the FPGA development board and equivalent to commercial software Xilinx Vivado simulation using synthesizable RTL test harness.
+
+
+PROJECTS
+Multi-threaded HTTP Server (C++)
+Collaborated with three graduate students to create a multi-threaded HTTP Server in C++.
+Implemented server support for JPEG photos requests, HTTP requests, and request errors.
+Performed performance evaluation on our C++ multi-threaded HTTP Server against an open-source Apache HTTP server by measuring throughput and latency for thousands of concurrent clients.
+Kaggle Machine Learning Competition: Mechanism of Action Prediction (Python)
+Reduced the dimensions of the Mechanism of Action dataset with Principal Component Analysis.
+Implemented and optimized machine learning classifiers, including Ridge regression, logistic regression, AdaBoost, random forest, and multilayer perceptron classifiers.
+Senior Design Project: Active Window (Smart Window)
+Collaborated with a team of four students to design and build connected smart windows.
+Calibrated temperature, photoresistor, and rain detector sensors to stimulate the window modules.
+Designed and built a custom CAN transceiver for low-power and long-distance data transmission.
+Presented the Active Window project on demo day, highlighting sensor calibration, CAN transceiver design, and smart window module performance.
+SRAM Cache Design Project
+Created an SRAM cache spec to layout workflow using a combination of commercial and open-source VLSI tools.
+Compiled SRAM macro with OpenRAM with NCSU FreePDK 45 nm technology and generated cache RTL in Verilog with open-source software OpenCache.
+Synthesized cache block with Synopsys Design Compiler with OpenCell library and SRAM macro database and performed basic floor planning, place, and route with Cadence Encounter.
+VLSI Bit Accumulator
+Designed a bit accumulator consisting of a full adder and a flip flop in Virtuoso Schematic Editor.
+Designed a 12.5 um x 3.7 um IC layout of the accumulator in 45 nm technology with Virtuoso Layout.
+Verified design with Hspice simulation and Cscope and characterized maximum frequency and power for the layout design.
+
+EDUCATION
+University of Massachusetts Amherst, Amherst, MA
+M.S. Computer Engineering (2023), B.S. Computer Engineering (2021)
+
+COMPUTER LANGUAGES (Most Skilled -> Least Skilled) 
+Python, C++, Rust, C, SystemVerilog, Verilog, Matlab, Kotlin, Java, Bash, Awk, MIPS
+
+TOOLS
+UVM, Git, Tcl, Verdi, Design Compiler, Vivado, ModelSim, HSPICE, Virtuoso, Cscope, Cadence Conformal LEC, Encounter, Intel Quartus Prime, Symbiflow, Yosys
