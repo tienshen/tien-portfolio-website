@@ -817,6 +817,11 @@ export default function ActiveWindowProject() {
         </section>
       </div>
 
+      {/* Footer */}
+      <footer className="p-6 text-center border-t border-gray-200 dark:border-gray-700">
+        <p>© {new Date().getFullYear()} Tien. Built with Next.js + Tailwind CSS.</p>
+      </footer>
+
       {/* Image Modal */}
       {selectedImage && (
         <div 
