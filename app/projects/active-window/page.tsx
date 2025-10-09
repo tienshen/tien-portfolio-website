@@ -112,7 +112,7 @@ export default function ActiveWindowProject() {
           <div className="flex items-center justify-between">
             <Link 
               href="/" 
-              className="flex items-center space-x-2 text-sm text-secondary hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="flex items-center space-x-2 text-sm text-secondary hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -142,7 +142,7 @@ export default function ActiveWindowProject() {
       <div className="relative overflow-hidden bg-box">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold !text-gray-900 dark:!text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Active Window
             </h1>
             <p className="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto">
@@ -178,11 +178,11 @@ export default function ActiveWindowProject() {
             <div className="bg-box rounded-2xl p-6 shadow">
               <div className="text-center mb-4">
                 <div className="w-16 h-16 mx-auto bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-3">
-                  <svg className="w-8 h-8 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-red-700 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-2">Climate Challenge</h3>
+                <h3 className="text-xl font-semibold text-red-700 dark:text-red-400 mb-2">Climate Challenge</h3>
               </div>
               <p className="text-secondary text-sm leading-relaxed">
                 Global electricity consumption per capita rose <strong>2.6x from 1971-2014</strong> (1,200 to 3,132 kWh), 
@@ -210,11 +210,11 @@ export default function ActiveWindowProject() {
             <div className="bg-box rounded-2xl p-6 shadow">
               <div className="text-center mb-4">
                 <div className="w-16 h-16 mx-auto bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-3">
-                  <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-green-700 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-2">Our Solution</h3>
+                <h3 className="text-xl font-semibold text-green-700 dark:text-green-400 mb-2">Our Solution</h3>
               </div>
               <p className="text-secondary text-sm leading-relaxed">
                 <strong>Open-source, low-cost system</strong> using reliable wired CAN bus communication. 
@@ -231,25 +231,25 @@ export default function ActiveWindowProject() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-4 text-red-600 dark:text-red-400">Problem Statement</h3>
+                <h3 className="text-xl font-semibold mb-4 text-red-800 dark:text-red-400">Problem Statement</h3>
                 <p className="text-secondary leading-relaxed">
                   Building automation systems can help reduce operational costs and carbon emissions by improving energy efficiency. 
                   However, many current solutions are manufacturer specific and expensive, making widespread adoption difficult.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Our Solution</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-800 dark:text-blue-400">Our Solution</h3>
                 <p className="text-secondary leading-relaxed mb-4">
                   Our project aims to assist the non-profit Manhattan-2 company develop "electrical and communications standards 
                   that define how devices interconnect within the building of the future."
                 </p>
                 <ul className="space-y-2 text-secondary">
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2">•</span>
+                    <span className="text-blue-700 dark:text-blue-400 mr-2">•</span>
                     Facilitate the development of an open-source software framework (Building Bus) to enable easy smart home device development
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2">•</span>
+                    <span className="text-blue-700 dark:text-blue-400 mr-2">•</span>
                     Develop a new CAN transceiver circuit that emphasizes smart building network priorities, particularly higher-reliability and lower operational power
                   </li>
                 </ul>
@@ -284,13 +284,13 @@ export default function ActiveWindowProject() {
           <div className="grid md:grid-cols-2 gap-8">
             {specifications.map((spec, index) => (
               <div key={index} className="bg-box rounded-2xl p-6 shadow">
-                <h3 className="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">
+                <h3 className="text-xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">
                   {spec.category}
                 </h3>
                 <ul className="space-y-3">
                   {spec.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start text-secondary">
-                      <span className="text-indigo-500 mr-3 mt-1">✓</span>
+                      <span className="text-indigo-700 dark:text-indigo-400 mr-3 mt-1">✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -306,7 +306,7 @@ export default function ActiveWindowProject() {
           <div className="bg-box rounded-2xl p-8 shadow">
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Distributed Network Design</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-700 dark:text-blue-400">Distributed Network Design</h3>
                 <p className="text-secondary leading-relaxed mb-4">
                   The prototype demonstrates a <strong>dual-network architecture</strong> with five XMC4200 boards. 
                   The system is divided into left and right networks, each powered by 16V and housed in electrical boxes 
@@ -319,7 +319,7 @@ export default function ActiveWindowProject() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-green-600 dark:text-green-400">Smart Sensor Integration</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-700 dark:text-green-400">Smart Sensor Integration</h3>
                 <p className="text-secondary leading-relaxed mb-4">
                   Three sensor types provide comprehensive environmental monitoring: <strong>TMP36 temperature sensors</strong> 
                   (calibrated against reference thermometer), <strong>photoresistors</strong> for light detection, 
