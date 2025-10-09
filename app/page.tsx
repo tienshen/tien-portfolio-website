@@ -25,8 +25,8 @@ export default function Home() {
   <section id="projects" className="p-8 bg-box mb-6 mx-[50px] rounded-2xl">
   <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
   <hr className="border-t border-gray-400 dark:border-gray-600 mb-10" />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow overflow-hidden">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 max-w-7xl mx-auto space-y-8">
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow overflow-hidden break-inside-avoid mb-8">
             {/* Title with collage background */}
             <div className="relative -mx-6 -mt-6 mb-4 p-6 pt-8 rounded-t-2xl overflow-hidden">
               {/* Collage background */}
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">Multi-threaded HTTP Server</h3>
             <p className="mb-2">High-performance HTTP server developed in C++ with collaborative graduate-level research. Implemented comprehensive support for HTTP requests, JPEG image serving, and error handling with multi-threading architecture for concurrent client connections.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">This Website (Portfolio)</h3>
             <p className="mb-2">Personal portfolio built with Next.js (app router), Tailwind CSS and TypeScript. Features a theme toggle with smooth transitions, responsive layout, and project showcase.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
@@ -102,7 +102,7 @@ export default function Home() {
 
           
 
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">Kaggle ML Competition: Mechanism of Action Prediction</h3>
             <p className="mb-2">Machine learning project focused on predicting biological mechanisms of action from gene expression and cell viability data. Applied dimensionality reduction and ensemble methods to classify drug responses across multiple targets.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">SRAM Cache Design Project</h3>
             <p className="mb-2">Complete VLSI design flow project from specification to physical layout. Implemented SRAM cache using industry-standard EDA tools, demonstrating full chip design methodology from RTL to GDSII.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">VLSI Bit Accumulator</h3>
             <p className="mb-2">Custom IC design project featuring a bit accumulator circuit in 45nm technology. Complete analog/digital design flow including schematic capture, physical layout, and comprehensive verification with timing and power analysis.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
