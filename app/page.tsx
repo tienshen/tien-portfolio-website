@@ -72,12 +72,13 @@ export default function Home() {
 
           <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
             <h3 className="text-lg font-bold mb-2">Multi-threaded HTTP Server</h3>
-            <p className="mb-2">High-performance HTTP server implemented in C with multi-threading support, socket programming, and concurrent request handling. Features custom HTTP parsing, thread pool management, and efficient resource serving.</p>
+            <p className="mb-2">High-performance HTTP server developed in C++ with collaborative graduate-level research. Implemented comprehensive support for HTTP requests, JPEG image serving, and error handling with multi-threading architecture for concurrent client connections.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
-              <li>C programming & POSIX threads</li>
+              <li>C++ & POSIX threads programming</li>
               <li>Socket programming (TCP/IP)</li>
-              <li>HTTP protocol implementation</li>
-              <li>Thread pool & concurrency control</li>
+              <li>HTTP protocol & JPEG image serving</li>
+              <li>Performance benchmarking vs Apache HTTP server</li>
+              <li>Concurrent client handling & error management</li>
             </ul>
             <div className="flex flex-wrap gap-4">
               <a href="https://github.com/tienshen/Multi-threaded-Server-Project" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Source</a>
