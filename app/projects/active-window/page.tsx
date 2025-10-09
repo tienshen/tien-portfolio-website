@@ -20,29 +20,29 @@ export default function ActiveWindowProject() {
     {
       name: 'Michael Chan',
       major: 'EE',
-      role: 'Hardware Engineer & Testing Lead',
-      contributions: 'CAN protocol implementation,  power distribution analysis, requirements validation,component sourcing',
+      role: 'CAN Protocol & Power Systems Engineer',
+      contributions: 'CAN protocol implementation, power distribution analysis, requirements validation, component sourcing',
       image: '/projects/active-window/mike.jpg'
     },
     {
       name: 'Dingbang Chen',
       major: 'CompE',
-      role: 'Software Architecture',
+      role: 'Firmware & Mechanical Integration Engineer',
       contributions: 'Firmware development, stepper motor integration, mechanical calibration',
       image: '/projects/active-window/Dingbang.jpg'
     },
     {
       name: 'Nathan Johnson',
       major: 'CompE',
-      role: 'Mechanical Design Engineer',
-      contributions: 'Network topology design, interrupt handling, Firmware development, performance testing',
+      role: 'Network Architecture & Software Engineer',
+      contributions: 'Network topology design, interrupt handling, firmware development, performance testing',
       image: '/projects/active-window/nathan.jpg'
     },
     {
       name: 'Tien Shen',
       major: 'CompE',
-      role: 'Project Lead & System Integration',
-      contributions: 'Sensor integration & algorithm, PCB design, window assembly fabrication, Team coordination',
+      role: 'Hardware Lead & Project Coordinator',
+      contributions: 'Sensor integration & algorithms, PCB design, window assembly fabrication, team coordination',
       image: '/projects/active-window/tien.jpg'
     }
   ];
