@@ -56,7 +56,7 @@ export default function ScrollingHeader() {
 
 
 
-  // Calculate theme toggle scale - shrink from 1.0 to 0.8 as we scroll
+  // Calculate theme toggle scale - shrink from maxScale to minScale as we scroll
   const minScale = 0.8
   const maxScale = 0.9
   const currentScale = Math.max(minScale, maxScale - (scrollY / maxScroll) * (maxScale - minScale))

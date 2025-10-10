@@ -233,14 +233,18 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           
           {/* Master's Degree */}
-          <div className="bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="mb-4">
+          <div className="relative bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Background image */}
+            <div className="absolute inset-0 opacity-3">
+              <img src="/University of Massachusetts Amherst logo.jpeg" alt="" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative mb-4">
               <h3 className="text-xl font-bold text-accent mb-2">Master of Science in Computer Engineering</h3>
               <p className="text-lg font-semibold text-[var(--foreground)] mb-1">University of Massachusetts Amherst</p>
-              <p className="text-sm text-secondary mb-3">College of Electrical and Computer Engineering</p>
+              <p className="text-sm text-secondary mb-3">Riccio College of Engineering</p>
               <span className="text-sm font-medium text-muted">May 2023</span>
             </div>
-            <div>
+            <div className="relative">
               <p className="text-sm text-secondary mb-3"><strong>Relevant Coursework:</strong></p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 tag rounded-full text-xs font-medium">Advanced Digital Design</span>
@@ -253,14 +257,18 @@ export default function Home() {
           </div>
 
           {/* Bachelor's Degree */}
-          <div className="bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="mb-4">
+          <div className="relative bg-[var(--background)] p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Background image */}
+            <div className="absolute inset-0 opacity-3">
+              <img src="/University of Massachusetts Amherst logo.jpeg" alt="" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative mb-4">
               <h3 className="text-xl font-bold text-accent mb-2">Bachelor of Science in Computer Engineering</h3>
               <p className="text-lg font-semibold text-[var(--foreground)] mb-1">University of Massachusetts Amherst</p>
-              <p className="text-sm text-secondary mb-3">College of Electrical and Computer Engineering</p>
+              <p className="text-sm text-secondary mb-3">Riccio College of Engineering</p>
               <span className="text-sm font-medium text-muted">May 2021</span>
             </div>
-            <div>
+            <div className="relative">
               <p className="text-sm text-secondary mb-3"><strong>Foundation Coursework:</strong></p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 tag rounded-full text-xs font-medium">Digital Logic Design</span>
