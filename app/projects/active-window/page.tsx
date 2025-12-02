@@ -41,7 +41,7 @@ export default function ActiveWindowProject() {
     {
       name: 'Tien Shen',
       major: 'CompE',
-      role: 'Hardware Lead & Project Coordinator',
+      role: 'Sensor Engineer & Project Coordinator',
       contributions: 'Sensor integration & algorithms, PCB design, window assembly fabrication, team coordination',
       image: '/projects/active-window/tien.jpg'
     }
