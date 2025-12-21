@@ -86,6 +86,20 @@ export default function Home() {
           </div>
 
           <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
+            <h3 className="text-lg font-bold mb-2">CoreML EP Performance Study</h3>
+            <p className="mb-2">Systems-level analysis of ONNX Runtime with the CoreML Execution Provider on Apple Silicon. Diagnoses graph partitioning, CPU fallback, dtype pitfalls, and when CoreML acceleration helps or hurts for transformer and MobileNet workloads.</p>
+            <ul className="mb-2 list-disc list-inside text-sm">
+              <li>ONNX Runtime profiling and graph analysis</li>
+              <li>CoreML Execution Provider behavior</li>
+              <li>Apple Silicon inference benchmarking</li>
+              <li>Transformer and MobileNet experiments</li>
+            </ul>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://github.com/tienshen/coreml-ep-performance-study" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </div>
+
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">This Website (Portfolio)</h3>
             <p className="mb-2">Personal portfolio built with Next.js (app router), Tailwind CSS and TypeScript. Features a theme toggle with smooth transitions, responsive layout, and project showcase.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
