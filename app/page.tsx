@@ -100,6 +100,34 @@ export default function Home() {
           </div>
 
           <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
+            <h3 className="text-lg font-bold mb-2">NVIDIA GPU Inference Performance Study</h3>
+            <p className="mb-2">Performance diagnosis of Transformer inference on NVIDIA GPUs across ONNX Runtime CUDA EP, ONNX Runtime TensorRT EP, and native TensorRT. Focuses on where latency flattens, which bottlenecks remain, and how runtime orchestration affects small static workloads.</p>
+            <ul className="mb-2 list-disc list-inside text-sm">
+              <li>ONNX Runtime CUDA and TensorRT execution paths</li>
+              <li>Native TensorRT engine benchmarking</li>
+              <li>Nsight Systems timeline analysis</li>
+              <li>CUDA Graphs and tail-latency optimization</li>
+            </ul>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://github.com/tienshen/nvidia-gpu-performance-study" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </div>
+
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
+            <h3 className="text-lg font-bold mb-2">LLM War Room</h3>
+            <p className="mb-2">A multi-agent investment decision framework powered by a local LLM on NVIDIA GPU. Five domain-expert agents debate a strategic topic in structured rounds before a CEO agent synthesizes the final decision, streamed live in the browser.</p>
+            <ul className="mb-2 list-disc list-inside text-sm">
+              <li>Flask web app with live SSE streaming</li>
+              <li>Multi-agent debate orchestration</li>
+              <li>CUDA-backed local LLM inference</li>
+              <li>CLI and browser-based demos</li>
+            </ul>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://github.com/tienshen/llm-war-room" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </div>
+
+          <div className="p-6 bg-[var(--background)] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 break-inside-avoid mb-8">
             <h3 className="text-lg font-bold mb-2">This Website (Portfolio)</h3>
             <p className="mb-2">Personal portfolio built with Next.js (app router), Tailwind CSS and TypeScript. Features a theme toggle with smooth transitions, responsive layout, and project showcase.</p>
             <ul className="mb-2 list-disc list-inside text-sm">
